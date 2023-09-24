@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { MainSpace, ImageSpace, FormSpace } from "./styles";
+import { Button } from "@mui/material";
+import Form from "./Form";
+import { CounterContext } from "./Context";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <MainSpace>
+      <ImageSpace />
+      <FormSpace>
+        <Form />
+        <div>
+      </div>
+      </FormSpace>
+    </MainSpace>
+    <Footer />
     </div>
   );
 }
-
 export default App;
